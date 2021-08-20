@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Mali:ital@0;1&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  background-color: hsla(12, 100%, 82%, 0.2);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  font-family: 'Mali', sans-serif;
+}
+
+h1 {
+  z-index: 100;
+  text-align: center;
+  place-self: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  transform: translateY(-15%);
+}
+
+h1, h2 {
+  font-family: 'Courgette', sans-serif;
+}
+
+figure:first-of-type {
+  align-items: center;
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 20rem;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+figure:first-of-type::after {
+  background-color: hsla(12, 100%, 82%, 0.7);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+figure:last-child {
+  display: none;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure figcaption {
+  display: none;
+}
+
+.recipe_details {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: flex-end;
+  z-index: 100;
+  margin-bottom: 3rem;
+}
+
+.recipe_details ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.recipe_details ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe_details ul li svg {
+  font-size: 1.5rem;
+}
+
+.recipe_details ul li:nth-of-type(2),
+.recipe_details ul li:nth-of-type(3) {
+  display: none;
+}
+
+.description {
+  max-width: 60ch;
+  line-height: 1.35;
+  margin: 2rem 1.5rem 1.5rem;
+}
+
+.description p {
+  margin-bottom: 0.5rem;
+}
+
+.ingredients {
+  list-style: none;
+  margin: 1rem 0 1rem;
+  width: min(100%, 60ch);
+}
+
+.ingredients li {
+  line-height: 1.6;
+  margin: 0 1.5rem;
+}
+
+.ingredients li label {
+  margin-left: 0.5rem;
+}
+
+input[type="checkbox"]:checked + label {
+  font-style: italic;
+  text-decoration: line-through ;
+  color: #666;
+}
+
+.variation {
+  max-width: 60ch;
+  line-height: 1.35;
+  margin: 1rem 1.5rem 1.5rem;
+  color: #333;
+  font-style: italic;
+}
+
+.instructions {
+  list-style: none;
+  counter-reset: instructions-counter;
+  margin: 1rem 1.5rem 1rem;
+  width: min(100%, 60ch);
+}
+
+.instructions > li {
+  counter-increment: instructions-counter;
+  margin: 2rem 1.5rem 3rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.instructions > li::before {
+  content: counter(instructions-counter);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: absolute;
+  width: 100%;
+  padding-left: 1rem;
+  background: linear-gradient(90deg, hsla(12, 100%, 82%, 1), hsla(12, 100%, 82%, 0));
+  top: -2rem;
+  box-sizing: border-box;
+  border-bottom-left-radius: 0.9rem;
+  border-top-left-radius: 0.9rem;
+}
+
+.instructions li ul {
+  margin: 0.75rem 1.25rem
+}
