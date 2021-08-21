@@ -1,0 +1,50 @@
+:root {
+  --gradient-0: radial-gradient( circle farthest-corner at 32.7% 82.7%, hsl(301, 100%, 34%) 8.3%, hsl(212, 92%, 31%) 79.4% );
+  --gradient-1: radial-gradient( circle 523px at 7.1% 19.3%, hsl(273, 100%, 33%) 2%, hsl(229, 100%, 61%) 100.7% );
+  --gradient-2: radial-gradient( circle 732px at 96.2% 89.9%, hsl(243, 81%, 44%)0%, hsl(333, 83%, 45%) 92% );
+  --gradient-3: radial-gradient( circle 926px at 2.7% 11%,  hsl(231, 80%, 22%) 0%, hsl(331, 85%, 51%) 90% );
+  --gradient-4: radial-gradient( circle farthest-corner at 10% 20%,  hsl(328, 71%, 48%) 0%, hsl(273, 64%, 37%) 90% );
+  --gradient-5: linear-gradient( 110deg, hsl(271, 92%, 24%) -5.2%, hsl(252, 83%, 32%) -5.2%, hsl(328, 65%, 56%) 103.3% );
+  --gradient-6: radial-gradient( circle farthest-corner at 10% 20%,  hsl(229, 47%, 37%) 0%, hsl(296, 98%, 36%) 90% );
+  --gradient-7: linear-gradient( 136deg, hsl(262, 97%, 54%)6.4%, hsl(282, 68%, 38%) 56.1% );
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: hsl(0, 0%, 13%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  flex-grow: 1;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  width: clamp(20rem, 100%, 86rem);
+}
+
+a {
+  aspect-ratio: 1/1;
+  background-color: gray;
+  color: white;
+  display: flex;
+  padding: 0 2rem;
+  place-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+a span {
+  font-size: 1.5rem;
+  text-align: center;
+}
