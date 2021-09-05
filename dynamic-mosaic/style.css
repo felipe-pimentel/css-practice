@@ -1,0 +1,56 @@
+:root {
+  /* color: #017FB1; */
+  color: #D45906;
+  color: #4199A7;
+  color: #070A0F;
+  /* color: #4F73A7; */
+  color: #969893;
+  color: #D2BF01;
+  color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.mosaic1, .mosaic2 {
+  aspect-ratio: 4/2;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  grid-auto-flow: dense;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.mosaic1 {
+  background-color: #ccc;
+}
+
+.title {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  left: 50%;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.title p a {
+  color: #aaa;
+}
